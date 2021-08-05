@@ -1,0 +1,1006 @@
+@font-face {
+  font-family: 'silkscreen';
+  src: url('./assets/fonts/slkscr.ttf');
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(0, 0, 0);
+  font-family: 'silkscreen';
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  /* box-shadow: inset 0 0 5px grey; */
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #bc4e9c; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f80759,
+    #bc4e9c
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f80759,
+    #bc4e9c
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-radius: 10px;
+}
+
+h1 {
+  margin: 0px;
+}
+a {
+  color: inherit;
+}
+nav {
+  padding: 20px 5px;
+  background-color: rgba(0, 0, 0, 0.74);
+  /* border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%; */
+  box-shadow: 0px 1px 4px black;
+  color: cornsilk;
+}
+
+nav h1 {
+  float: left;
+  margin: 0 20px;
+  padding: 0;
+}
+nav ul li {
+  float: left;
+}
+
+.ps5Logo {
+  height: 30px;
+  width: 30px;
+}
+
+#navContent {
+  max-width: 50%;
+}
+
+#navContent ul {
+  margin: 0;
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.navt {
+  padding-top: 6px;
+}
+
+.goToTop {
+  border-radius: 50%;
+  font-size: 2.5rem;
+  background-color: cornsilk;
+  color: black;
+  border: none;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  /* place it at the bottom right corner */
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  /* keep it at the top of everything else */
+  z-index: 100;
+  /* hide it at first */
+  /* UPDATE: remove display none */
+  /* 
+    /* hide with opacity */
+  opacity: 0;
+  /* also add a translate effect */
+  transform: translateY(100px);
+  /* and a transition */
+  transition: all 0.5s ease;
+  text-decoration: none;
+  /* padding-top: 10px;
+    padding: 0 4px; */
+}
+
+.showBtn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#partOne {
+  background-image: url(https://cdna.artstation.com/p/assets/images/images/015/825/816/large/ihor-volkov-playstation03v4.jpg?1549823246);
+  background-repeat: no-repeat;
+  background-position: center;
+  /* position: relative; */
+  height: 120vh;
+  box-shadow: 0px -4px 6px black;
+  text-align: center;
+  position: relative;
+  text-align: center;
+}
+
+.partOneContent {
+  padding-top: 160px;
+  color: cornsilk;
+  text-align: center;
+  width: 30%;
+  margin-left: 35%;
+  text-align: center;
+  transition: transform 0.4s;
+}
+
+#partOne h1 {
+  font-size: 7rem;
+  text-shadow: 2px 2px 4px black;
+}
+#partOne p {
+  font-size: 1.3rem;
+  text-shadow: 1px 1px 3px black;
+}
+
+.buttonsBox {
+  height: 120vh;
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+.buttons {
+  width: 47px;
+  height: 40px;
+  transition: transform 0.6s;
+  transform: rotate(270deg);
+  perspective: 100px;
+}
+
+.buttons:nth-child(2n) {
+  transition: transform 0.5s;
+  transform: rotate(-270deg);
+}
+
+.buttonsIn {
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  transform: rotate(180deg);
+}
+
+.buttonsOut {
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  transform: rotate(0deg);
+}
+
+.square1 {
+  position: absolute;
+  top: 4%;
+  left: 6%;
+}
+.square3 {
+  position: absolute;
+  top: 33%;
+  left: 95%;
+}
+.square4 {
+  position: absolute;
+  top: 16%;
+  left: 62%;
+}
+.square2 {
+  position: absolute;
+  top: 52%;
+  left: 20%;
+}
+
+.triangle2 {
+  position: absolute;
+  top: 11%;
+  left: 17%;
+}
+.triangle1 {
+  position: absolute;
+  top: 25%;
+  left: 37%;
+}
+.triangle3 {
+  position: absolute;
+  top: 1%;
+  left: 90%;
+}
+.triangle4 {
+  position: absolute;
+  top: 69%;
+  left: 68%;
+}
+
+.circle1 {
+  position: absolute;
+  top: 32%;
+  left: 10%;
+}
+.circle2 {
+  position: absolute;
+  top: 11%;
+  left: 48%;
+}
+.circle3 {
+  position: absolute;
+  top: 28%;
+  left: 73%;
+}
+.circle4 {
+  position: absolute;
+  top: 64%;
+  left: 89%;
+}
+
+.x1 {
+  position: absolute;
+  top: 69%;
+  left: 2%;
+}
+.x2 {
+  position: absolute;
+  top: 6%;
+  left: 29%;
+}
+.x3 {
+  position: absolute;
+  top: 59%;
+  left: 35%;
+}
+.x4 {
+  position: absolute;
+  top: 20%;
+  left: 85%;
+}
+
+.start {
+  position: absolute;
+  top: 58%;
+  left: 42%;
+  background: transparent;
+  /* display: flex;
+    justify-content: center;
+    align-items: center; */
+  padding: 15px 30px;
+  display: inline-block;
+  /* height: 70px;
+    width: 230px; */
+  font-size: 1.5rem;
+  color: cornsilk;
+  overflow: hidden;
+  transition: transform 0.4s;
+  cursor: pointer;
+}
+
+.start:hover {
+  color: black;
+  background: #e94ea0;
+  box-shadow: 0 0 10px #e94ea0, 0 0 40px #e94ea0, 0 0 80px #bc4e9c;
+  transition: 0.4s;
+  transition-delay: 1s;
+}
+
+.start span {
+  position: absolute;
+  display: block;
+}
+
+.start span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, cornsilk);
+}
+.start:hover span:nth-child(1) {
+  left: 100%;
+  transition: 1s;
+}
+
+.start span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, cornsilk);
+}
+.start:hover span:nth-child(3) {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+.start span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, cornsilk);
+}
+.start:hover span:nth-child(2) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+.start span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(3600deg, transparent, cornsilk);
+}
+.start:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
+
+#partTwo {
+  margin: 0px;
+  color: cornsilk;
+  width: 80%;
+  margin-left: 10%;
+  box-shadow: 0px -4px 6px rgb(0, 0, 0);
+  text-align: center;
+}
+
+#partTwo img {
+  width: 80%;
+  height: 30%;
+  /* margin-left: 10%; */
+}
+
+#partTwo h1 {
+  font-size: 2em;
+}
+
+#partThree {
+  background: #bc4e9c; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f80759,
+    #bc4e9c
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f80759,
+    #bc4e9c
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  margin-top: 50px;
+  height: 300px;
+  transform: skewY(-5deg);
+}
+
+.partThreeContent {
+  padding: 60px 0;
+  width: 80%;
+  margin-left: 10%;
+}
+
+.partThreeContent h1 {
+  font-size: 3em;
+}
+
+.partThreeContent p {
+  font-size: 1.5em;
+}
+
+#part4 {
+  width: 80%;
+  margin: 10%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.flip-card img {
+  width: 80%;
+  height: 400px;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 40%;
+  height: 400px;
+  perspective: 1000px;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 30px;
+}
+
+.flip-card-front {
+  background: #bc4e9c; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f80759,
+    #bc4e9c
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f80759,
+    #bc4e9c
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: black;
+}
+
+.flip-card-back {
+  background: #bc4e9c; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f80759,
+    #bc4e9c
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f80759,
+    #bc4e9c
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: cornsilk;
+  transform: rotateY(180deg);
+}
+
+.flip-card-back h1 {
+  margin: 30px;
+  margin-top: 60px;
+  font-size: 2.3em;
+}
+
+.flip-card-back p {
+  font-size: 1.3em;
+  margin: 30px;
+}
+
+#part5 {
+  /* background-image: url(horizon.jpg); */
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.4) 40%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url(./assets/images/horizon.jpg);
+  height: 180vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  /* filter: blur(2px); */
+  color: cornsilk;
+}
+
+.part5Tech {
+  display: flex;
+  margin: 80px;
+}
+
+.part5Content {
+  padding: 60px;
+  padding-top: 100px;
+}
+
+.part5Heading {
+  text-align: center;
+}
+
+.part5Heading h1 {
+  font-size: 3em;
+}
+
+.part5Tech img {
+  width: 130px;
+  height: 130px;
+  margin: 0 30px;
+}
+
+.techContent {
+  margin-top: 30px;
+}
+
+#part6 {
+  width: 80%;
+  height: 330vh;
+  color: cornsilk;
+  text-align: center;
+  margin: 10%;
+}
+
+.p6h {
+  margin: 30px;
+  margin-top: 60px;
+  font-size: 4em;
+}
+
+.game {
+  width: 40%;
+  height: 40vh;
+  margin: 20px;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 45px;
+  padding-top: 30px;
+}
+
+.game h1 {
+  font-size: 2em;
+}
+
+.game p {
+  font-size: 1em;
+}
+
+.part6Content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.g1 {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.8) 5%,
+      rgba(0, 0, 0, 0.6) 35%,
+      rgba(0, 0, 0, 0.4) 75%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url(https://gmedia.playstation.com/is/image/SIEPDC/ps5-spiderman-video-thumb-block-9-en-110620?$1600px$);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.g2 {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.8) 5%,
+      rgba(0, 0, 0, 0.6) 35%,
+      rgba(0, 0, 0, 0.4) 75%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url(https://gmedia.playstation.com/is/image/SIEPDC/ps5-hzd-video-thumb-block-05-en-110620?$1600px$);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.g3 {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.8) 5%,
+      rgba(0, 0, 0, 0.6) 35%,
+      rgba(0, 0, 0, 0.4) 75%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url(https://gmedia.playstation.com/is/image/SIEPDC/ps5-ratchet_clank-video-thumb-block-06-en-110620?$1600px$);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.g4 {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.8) 5%,
+      rgba(0, 0, 0, 0.6) 35%,
+      rgba(0, 0, 0, 0.4) 75%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url(https://gmedia.playstation.com/is/image/SIEPDC/ps5-gt7-video-thumb-block-07-en-110620?$1600px$);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.g5 {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.8) 5%,
+      rgba(0, 0, 0, 0.6) 35%,
+      rgba(0, 0, 0, 0.4) 75%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url(https://gmedia.playstation.com/is/image/SIEPDC/ps5-returnal-video-thumb-block-05-en-110620?$1600px$);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.g6 {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.8) 5%,
+      rgba(0, 0, 0, 0.6) 35%,
+      rgba(0, 0, 0, 0.4) 75%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url(https://gmedia.playstation.com/is/image/SIEPDC/ps5-sackboy-video-thumb-block-06-en-110620?$1600px$);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.g7 {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.8) 5%,
+      rgba(0, 0, 0, 0.6) 35%,
+      rgba(0, 0, 0, 0.4) 75%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url(https://gmedia.playstation.com/is/image/SIEPDC/deathloop-screenshot-02-en-21jul20?$1600px$);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.g8 {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.8) 5%,
+      rgba(0, 0, 0, 0.6) 35%,
+      rgba(0, 0, 0, 0.4) 75%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url(https://gmedia.playstation.com/is/image/SIEPDC/godfall-screen-04-ps5-en-21jul20?$1600px$);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.g9 {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.8) 5%,
+      rgba(0, 0, 0, 0.6) 35%,
+      rgba(0, 0, 0, 0.4) 75%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url(https://gmedia.playstation.com/is/image/SIEPDC/demons-souls-screenshot-01-ps5-en-12jun20?$1600px$);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.g10 {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.8) 5%,
+      rgba(0, 0, 0, 0.6) 35%,
+      rgba(0, 0, 0, 0.4) 75%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url(https://gmedia.playstation.com/is/image/SIEPDC/destruction-allstars-screenshot-05-disclaimer-ps5-en-12jun20?$1600px$);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.g11 {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.8) 5%,
+      rgba(0, 0, 0, 0.6) 35%,
+      rgba(0, 0, 0, 0.4) 75%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url(https://gmedia.playstation.com/is/image/SIEPDC/nba-2k21-mamba-forever-edition-listing-thumb-01-en-29jun20?$1600px$);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.g12 {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.8) 5%,
+      rgba(0, 0, 0, 0.6) 35%,
+      rgba(0, 0, 0, 0.4) 75%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url(https://gmedia.playstation.com/is/image/SIEPDC/fifa-21-ps4-screen-05-en-23jul20?$1600px$);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#part7 {
+  /* background-image: url(horizon.jpg); */
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.4) 40%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url(https://i0.wp.com/wallpapersfortech.com/wp-content/uploads/2020/11/Spiderman-Miles-Morales-Wallpaper-4K.jpg?fit=2560%2C1440&ssl=1);
+  height: 180vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  /* filter: blur(2px); */
+  color: cornsilk;
+}
+
+.part7Tech {
+  display: flex;
+  margin: 80px;
+}
+
+.part7Content {
+  padding: 60px;
+  padding-top: 100px;
+}
+
+.part7Heading {
+  text-align: center;
+}
+
+.part7Heading h1 {
+  font-size: 3em;
+}
+
+.part7Tech img {
+  width: 130px;
+  height: 130px;
+  margin: 0 30px;
+}
+
+.techContent {
+  margin-top: 30px;
+}
+
+#part8 {
+  width: 80%;
+  height: 70vh;
+  color: cornsilk;
+  text-align: center;
+  margin: 10%;
+}
+.p8h {
+  margin: 30px;
+  margin-top: 60px;
+  font-size: 4em;
+}
+
+#part8 form {
+  color: cornsilk;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.part8Inp {
+  width: 40%;
+}
+
+#part8 input {
+  width: 100%;
+  height: 50px;
+  margin-top: 20px;
+  border-radius: 45px;
+  border: 2px solid black;
+  background: #bc4e9c; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f80759,
+    #bc4e9c
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f80759,
+    #bc4e9c
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  outline: none;
+  padding: 0 20px;
+  color: cornsilk;
+  font-size: 0.9em;
+  font-family: 'silkscreen';
+  caret-color: cornsilk;
+}
+
+#part8 select {
+  width: 110%;
+  height: 55px;
+  margin-top: 20px;
+  border-radius: 45px;
+  border: 2px solid black;
+  background: #bc4e9c; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f80759,
+    #bc4e9c
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f80759,
+    #bc4e9c
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  outline: none;
+  padding: 0 20px;
+  color: cornsilk;
+  font-size: 0.9em;
+  font-family: 'silkscreen';
+}
+
+select option {
+  width: 110%;
+  height: 55px;
+  margin-top: 20px;
+  border-radius: 45px;
+  border: 50px solid black;
+  background: #bc4e81;
+  outline: none;
+  padding: 0 20px;
+  color: cornsilk;
+  font-size: 0.9em;
+  font-family: 'silkscreen';
+}
+
+#part8 label {
+  margin-top: 40px;
+  padding-left: 20px;
+  text-align: left;
+  display: block;
+}
+
+.part8Submit {
+  width: 100%;
+  height: 50px;
+  margin-top: 50px;
+  border-radius: 45px;
+  border: 2px solid black;
+  color: inherit;
+  font: inherit;
+  background: #bc4e9c; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f80759,
+    #bc4e9c
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f80759,
+    #bc4e9c
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  outline: none;
+  padding: 0 20px;
+  caret-color: cornsilk;
+  cursor: pointer;
+}
+
+::placeholder {
+  color: cornsilk;
+  font-size: 1.1em;
+  font-family: 'silkscreen';
+}
+::-ms-value {
+  color: cornsilk;
+  font-size: 1.1em;
+  font-family: 'silkscreen';
+}
+
+footer {
+  color: white;
+  background: rgb(14, 10, 12);
+  background: linear-gradient(
+      0deg,
+      rgba(14, 10, 12, 1) 0%,
+      rgba(14, 10, 12, 0.7) 25%,
+      rgba(14, 10, 12, 0.5) 60%,
+      rgba(14, 10, 12, 0.7) 88%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url(https://d229noksprj98s.cloudfront.net/wp-content/uploads/2020/11/demons-souls-remake-guide-12-tips-and-tricks-you-need-to-know.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 80vh;
+}
+
+.ftop {
+  display: flex;
+}
+
+.region {
+  text-decoration: none;
+}
+
+.flogo {
+  margin: 2rem;
+  padding-top: 2rem;
+  width: 30%;
+}
+
+.sony {
+  height: 4rem;
+  width: 5rem;
+}
+.globe {
+  height: 20px;
+  width: 20px;
+  margin-top: 10px;
+}
+
+.fpart1 {
+  margin-right: 3rem;
+  margin-top: 4rem;
+  width: 100%;
+  padding: 0;
+}
+.fpart1 li {
+  font-size: 0.9em;
+  margin-top: 20px;
+  list-style-type: none;
+  width: 75%;
+}
+.fpart1 a {
+  text-decoration: none;
+}
+
+.fpart2 {
+  margin-right: 6rem;
+  margin-top: 4rem;
+  width: 100%;
+  padding: 0;
+}
+.fpart2 li {
+  font-size: 0.9em;
+  margin-top: 20px;
+  list-style-type: none;
+  width: 100%;
+}
+.fpart2 a {
+  text-decoration: none;
+}
+
+.fbotom img {
+  margin-left: 30px;
+  margin-top: 10px;
+  height: 5rem;
+  width: 9rem;
+}
+
+.fbotom p {
+  margin: 30px;
+  width: 60%;
+  margin-top: 0;
+  font-size: 0.7em;
+}
